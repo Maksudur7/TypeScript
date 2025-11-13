@@ -1,0 +1,40 @@
+// union | 
+
+type UserRole = 'admin' | 'user' ;
+
+const getDashboard = (role : UserRole) =>{
+    if(role === 'admin'){
+        return 'Admin Dashboard'
+    }
+    else if(role === 'user'){
+        return ' User Dashboard'
+    }
+    else{
+        return 'guest dashboard'
+    }
+}
+
+getDashboard('admin')
+
+// intersection &
+
+type Employee = {
+    id: number;
+    name: string;
+    phoneNo : string
+}
+
+type Manager = {
+    designation : string;
+    teamSize : number
+}
+
+type EmployeeManager = Employee & Manager 
+
+const ChowdhuryShaheb: EmployeeManager ={
+    id : 123,
+    name : 'chowdhury shaheb',
+    phoneNo : '012358',
+    designation : 'manager',
+    teamSize : 50
+}
